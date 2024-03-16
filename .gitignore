@@ -361,3 +361,19 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+allocator.h
+assertions.h
+config.h
+forwards.h
+json.h
+json_features.h
+json_reader.cpp
+json_tool.h
+json_value.cpp
+json_valueiterator.inl
+json_writer.cpp
+reader.h
+value.h
+version.h
+writer.h

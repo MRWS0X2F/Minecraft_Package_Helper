@@ -4,8 +4,20 @@ using namespace std;
 
 int main()
 {
-    cout<<AppInfo::getAppName()<< endl;
-    cout << language::getText("App") << endl;
+    while (true)
+    {
+        cout << "***************************************" << endl;
+        cout << "******" + AppInfo::getAppName() << endl;
+        cout << "******" + AppInfo::getAppVision() << endl;
+        cout << "******" + AppInfo::getAppAuthor() << endl;
+        cout << "******" + AppInfo::getAppAddress() << endl;
+        cout << "***************************************" << endl;
+        system("pause");
+        //cout<<<<
+        //cout<<<<
+        //cout<<<<
+        //cout<<<<
+    }
     system("pause");
     return 0;
 }

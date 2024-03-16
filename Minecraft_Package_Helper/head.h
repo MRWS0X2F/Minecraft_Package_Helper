@@ -7,6 +7,7 @@ constexpr auto Addones = 2;
 #include<iostream>
 #include<string.h>
 #include<windows.h>
+#include"language.h"
 
 //App信息
 class AppInfo
@@ -15,18 +16,32 @@ public:
     //获取名称
     static std::string getAppName()
     {
-        std::string AppName = "MHP";
+        std::string AppName = language::getText("Welcome");
         return AppName;
     }
     //获取版本
     static std::string getAppVision()
     {
-        std::string Vision = "Alpha-0.0.1";
+        std::string Vision = language::getText("Vision") + ":Alpha-0.0.1";
         return Vision;
+    }
+    //获取作者
+    static std::string getAppAuthor()
+    {
+        std::string Author = language::getText("Author")+":MRWS0X2F";
+        return Author;
+    }
+    //获取地址
+    static std::string getAppAddress()
+    {
+        std::string Address = language::getText("Address")+":https://github.com/MRWS0X2F/Minecraft_Package_Helper/";
+        return Address;
     }
 private:
     static std::string AppName;
     static std::string Vision;
+    static std::string Author;
+    static std::string Address;
 };
 
 class Setting :AppInfo

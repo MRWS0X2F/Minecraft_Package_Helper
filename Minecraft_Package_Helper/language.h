@@ -1,3 +1,5 @@
+#pragma once
+
 #include<string>
 #include<iostream>
 #include<fstream>
@@ -17,18 +19,21 @@ public:
 		{
 			while (getline(languageFile, tmp))
 			{
-				cout << tmp << endl;
+				int pos = tmp.find(text + "=");
+				if (pos>=0)
+				{
+					int equal = tmp.find("=");
+					int end = tmp.find(";");
+					return tmp.substr(equal+1, end-equal-1);
+				}
 			}
 		}
 		else {
-			cout << "Can't read " + FileName[AppLanguage] << endl;
-			return NULL;
+			return "Can't read " + FileName[AppLanguage];
 		}
 		return tmp;
 	}
 
 private:
 	static string FileName;
-	char TmpTextList1[1000][1000];
-	char TmpTextList2[1000][1000];
 };
