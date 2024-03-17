@@ -24,7 +24,7 @@ public:
 				{
 					int equal = tmp.find("=");
 					int end = tmp.find(";");
-					return tmp.substr(equal+1, end-equal-1);
+					return tmp.substr(static_cast<std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type>(equal) + 1, static_cast<std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type>(end) - equal - 1);
 				}
 			}
 		}

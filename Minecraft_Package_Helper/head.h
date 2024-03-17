@@ -44,9 +44,24 @@ private:
     static std::string Address;
 };
 
-class Setting :AppInfo
+class Setting
 {
-    
+public:
+    static void AppSetting()
+    {
+        int tmp = 0;
+        int choose = 0;
+        cout << "******\t(1):" + language::getText("SetLanguang") << endl;
+        cin >> choose;
+        if (choose<=1)
+        {
+            system("cls");
+            cout << "******\t(1):" + language::getText("zh_CN") << endl;
+            cout << "******\t(2):" + language::getText("en_US") << endl;
+            cout << language::getText("ChooseLanguage")<<":";
+            //cin >> language::AppLanguage;
+        }
+    }
 };
 
 //包的默认信息
