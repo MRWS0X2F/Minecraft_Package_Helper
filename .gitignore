@@ -377,3 +377,17 @@ reader.h
 value.h
 version.h
 writer.h
+.build/*
+.music/*
+.tmp/*
+.lib/node_modules/*
+.lib/autopk.js
+.lib/config.json
+.lib/package.json
+.lib/package-lock.json
+/Minecraft_Package_Helper/lib/build
+/Minecraft_Package_Helper/lib/tmp
+/Minecraft_Package_Helper/lib/autopk.js
+/Minecraft_Package_Helper/lib/config.json
+/Minecraft_Package_Helper/lib/package-lock.json
+/Minecraft_Package_Helper/lib/package.json

@@ -3,13 +3,14 @@
 #include<string>
 #include<iostream>
 #include<fstream>
+#include<winnt.h>
 using namespace std;
 
-//ÓïÑÔÀà
+//è¯­è¨€ç±»
 class language
 {
 public:
-	//¾²Ì¬Àà³ÉÔ±
+	//é™æ€ç±»æˆå‘˜
 	static int AppLanguage;
 	static string getText(const string text)
 	{
@@ -38,6 +39,6 @@ private:
 	static string FileName[64];
 };
 
-//ÔÚÀàÍâ³õÊ¼»¯
+//åœ¨ç±»å¤–åˆå§‹åŒ–
 int language::AppLanguage = 0;
 string language::FileName[64] = { "zh_CN.lang","en_US.lang" };

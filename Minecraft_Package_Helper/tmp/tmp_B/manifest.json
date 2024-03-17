@@ -1,0 +1,40 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "A Minecraft pack",
+        "description": "一个描述\n\nThis package was made by somebody and packaged using auto package tool",
+        "uuid": "cf538268-dbdf-4d3c-91e6-3b12be2a8e6f",
+        "version": [
+            0,
+            0,
+            1
+        ],
+        "min_engine_version": [
+            1,
+            16,
+            0
+        ]
+    },
+    "modules": [
+        {
+            "description": "一个描述\n\nThis package was made by somebody and packaged using auto package tool",
+            "type": "data",
+            "uuid": "ee95300a-71e8-47a2-b937-986f9a3d029b",
+            "version": [
+                0,
+                0,
+                1
+            ]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "33d35b80-a415-4b01-b08f-fc9e6bf1760b",
+            "version": [
+                0,
+                0,
+                1
+            ]
+        }
+    ]
+}

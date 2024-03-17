@@ -1,4 +1,4 @@
-﻿#pragma once
+#pragma once
 
 constexpr auto RP = 0;
 constexpr auto BP = 1;
@@ -6,7 +6,7 @@ constexpr auto Addones = 2;
 //包含相关头文件
 #include<iostream>
 #include<string.h>
-#include<windows.h>
+#include<Windows.h>
 #include"language.h"
 
 //App信息
@@ -44,7 +44,7 @@ private:
 std::string AppInfo::AppName = language::getText("Welcome");
 std::string AppInfo::Vision = language::getText("Vision") + ":Alpha-0.0.1";
 std::string AppInfo::Author = language::getText("Author") + ":MRWS0X2F";
-std::string AppInfo::Address = language::getText("Address") + ":https://github.com/MRWS0X2F/Minecraft_Package_Helper/";
+std::string AppInfo::Address = language::getText("Address") + ": https://github.com/MRWS0X2F/Minecraft_Package_Helper/";
 
 class Settings
 {
@@ -54,12 +54,15 @@ public:
         int tmp = 0;
         int choose = 0;
         cout << "******\t(1):" + language::getText("SetLanguang") << endl;
+        cout << "***************************************" << endl;
+        cout << language::getText("Function") << ":";
         cin >> choose;
         if (choose<=1)
         {
             system("cls");
             cout << "******\t(0):" + language::getText("zh_CN") << endl;
             cout << "******\t(1):" + language::getText("en_US") << endl;
+            cout << "***************************************" << endl;
             cout << language::getText("ChooseLanguage")<<":";
             cin >> language::AppLanguage;
             system("cls");

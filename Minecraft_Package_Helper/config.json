@@ -1,0 +1,19 @@
+{
+    "pack_name":"test",
+    "title":"A Minecraft pack",
+    "describe":"一个描述",
+    "author":"somebody",
+    "type":"RB",
+    "pack_scope":"false",
+    "uuid":{
+        "header":"",
+        "modules":[
+            "",""
+        ],
+        "dependencies":""
+    },
+    "version":{
+        "packv": [0,0,1],
+        "minv": [1,16,0]
+    }
+}
