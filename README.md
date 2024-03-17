@@ -2,7 +2,7 @@
 - ## JS版:
 - [MCBE资源包打包工具](https://github.com/TukJiu/Minecarft-bedrock-mcpacks-auto-packing)(作者:TukJiu)
 - [自动打包](https://github.com/MRWS0X2F/AutoPacking)(不推荐)
-# 功能预览：
+# 功能：
 - ## 当前已完成
 - 1.本土化支持
 - ## 计划功能
