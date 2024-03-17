@@ -16,12 +16,11 @@ int main()
         cout << "***************************************" << endl;
         cout << language::getText("Function") << ":";
         cin >> choose;
-        if (choose<=1)
+        if (int(choose)<=1)
         {
             system("cls");
-            Setting::AppSetting();
+            Settings::AppSetting();
         }
-        system("pause");
         //cout<<<<
         //cout<<<<
         //cout<<<<

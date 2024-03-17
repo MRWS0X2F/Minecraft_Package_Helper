@@ -16,25 +16,21 @@ public:
     //获取名称
     static std::string getAppName()
     {
-        std::string AppName = language::getText("Welcome");
         return AppName;
     }
     //获取版本
     static std::string getAppVision()
     {
-        std::string Vision = language::getText("Vision") + ":Alpha-0.0.1";
         return Vision;
     }
     //获取作者
     static std::string getAppAuthor()
     {
-        std::string Author = language::getText("Author")+":MRWS0X2F";
         return Author;
     }
     //获取地址
     static std::string getAppAddress()
     {
-        std::string Address = language::getText("Address")+":https://github.com/MRWS0X2F/Minecraft_Package_Helper/";
         return Address;
     }
 private:
@@ -44,7 +40,13 @@ private:
     static std::string Address;
 };
 
-class Setting
+//在AppInfo外初始化
+std::string AppInfo::AppName = language::getText("Welcome");
+std::string AppInfo::Vision = language::getText("Vision") + ":Alpha-0.0.1";
+std::string AppInfo::Author = language::getText("Author") + ":MRWS0X2F";
+std::string AppInfo::Address = language::getText("Address") + ":https://github.com/MRWS0X2F/Minecraft_Package_Helper/";
+
+class Settings
 {
 public:
     static void AppSetting()
@@ -56,10 +58,11 @@ public:
         if (choose<=1)
         {
             system("cls");
-            cout << "******\t(1):" + language::getText("zh_CN") << endl;
-            cout << "******\t(2):" + language::getText("en_US") << endl;
+            cout << "******\t(0):" + language::getText("zh_CN") << endl;
+            cout << "******\t(1):" + language::getText("en_US") << endl;
             cout << language::getText("ChooseLanguage")<<":";
-            //cin >> language::AppLanguage;
+            cin >> language::AppLanguage;
+            system("cls");
         }
     }
 };

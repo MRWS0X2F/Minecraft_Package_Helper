@@ -5,14 +5,14 @@
 #include<fstream>
 using namespace std;
 
+//语言类
 class language
 {
 public:
+	//静态类成员
 	static int AppLanguage;
 	static string getText(const string text)
 	{
-		int AppLanguage = 0;
-		string FileName[64] = {"zh_CN.lang","en_US.lang"};
 		string tmp;
 		ifstream languageFile("./lib/language/" + FileName[AppLanguage]);
 		if (languageFile.is_open())
@@ -35,5 +35,9 @@ public:
 	}
 
 private:
-	static string FileName;
+	static string FileName[64];
 };
+
+//在类外初始化
+int language::AppLanguage = 0;
+string language::FileName[64] = { "zh_CN.lang","en_US.lang" };
