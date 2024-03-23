@@ -5,13 +5,6 @@
     "author":"somebody",
     "type":"RB",
     "pack_scope":"false",
-    "uuid":{
-        "header":"",
-        "modules":[
-            "",""
-        ],
-        "dependencies":""
-    },
     "version":{
         "packv": [0,0,1],
         "minv": [1,16,0]

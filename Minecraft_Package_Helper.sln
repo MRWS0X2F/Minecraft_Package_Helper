@@ -5,31 +5,33 @@ VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Minecraft_Package_Helper", "Minecraft_Package_Helper\Minecraft_Package_Helper.vcxproj", "{BA165070-2444-44CC-9928-CD2A11AB8D4A}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{D654FAC6-396C-4C4B-AD0E-049C9A5FA5E0}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{AF38E1A4-1288-4417-9D9E-373F0EBA961E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BA165070-2444-44CC-9928-CD2A11AB8D4A}.Debug|x64.ActiveCfg = Debug|x64
 		{BA165070-2444-44CC-9928-CD2A11AB8D4A}.Debug|x64.Build.0 = Debug|x64
-		{BA165070-2444-44CC-9928-CD2A11AB8D4A}.Release|x64.ActiveCfg = Release|x64
-		{BA165070-2444-44CC-9928-CD2A11AB8D4A}.Release|x64.Build.0 = Release|x64
-		{D654FAC6-396C-4C4B-AD0E-049C9A5FA5E0}.Debug|x64.ActiveCfg = Debug
-		{D654FAC6-396C-4C4B-AD0E-049C9A5FA5E0}.Release|x64.ActiveCfg = Release
+		{BA165070-2444-44CC-9928-CD2A11AB8D4A}.Debug|x86.ActiveCfg = Debug|Win32
+		{BA165070-2444-44CC-9928-CD2A11AB8D4A}.Debug|x86.Build.0 = Debug|Win32
+		{BA165070-2444-44CC-9928-CD2A11AB8D4A}.Release|x64.ActiveCfg = Release|Win32
+		{BA165070-2444-44CC-9928-CD2A11AB8D4A}.Release|x64.Build.0 = Release|Win32
+		{BA165070-2444-44CC-9928-CD2A11AB8D4A}.Release|x86.ActiveCfg = Release|Win32
+		{BA165070-2444-44CC-9928-CD2A11AB8D4A}.Release|x86.Build.0 = Release|Win32
+		{AF38E1A4-1288-4417-9D9E-373F0EBA961E}.Debug|x64.ActiveCfg = Debug
+		{AF38E1A4-1288-4417-9D9E-373F0EBA961E}.Debug|x86.ActiveCfg = Debug
+		{AF38E1A4-1288-4417-9D9E-373F0EBA961E}.Release|x64.ActiveCfg = Release
+		{AF38E1A4-1288-4417-9D9E-373F0EBA961E}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B0224501-BFE3-4389-93EE-240AFA478917}
-	EndGlobalSection
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
 	EndGlobalSection
 EndGlobal

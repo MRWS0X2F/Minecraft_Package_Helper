@@ -42,7 +42,7 @@ private:
 
 //在AppInfo外初始化
 std::string AppInfo::AppName = language::getText("Welcome");
-std::string AppInfo::Vision = language::getText("Vision") + ":Alpha-0.0.1";
+std::string AppInfo::Vision = language::getText("Vision") + ":0.0.1";
 std::string AppInfo::Author = language::getText("Author") + ":MRWS0X2F";
 std::string AppInfo::Address = language::getText("Address") + ": https://github.com/MRWS0X2F/Minecraft_Package_Helper/";
 

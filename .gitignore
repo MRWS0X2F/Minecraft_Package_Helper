@@ -394,3 +394,4 @@ writer.h
 /Minecraft_Package_Helper/tmp/*
 /Minecraft_Package_Helper/build/*
 /Setup/*
+/Minecraft_Package_Helper/lib/icon/app
