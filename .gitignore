@@ -391,3 +391,6 @@ writer.h
 /Minecraft_Package_Helper/lib/config.json
 /Minecraft_Package_Helper/lib/package-lock.json
 /Minecraft_Package_Helper/lib/package.json
+/Minecraft_Package_Helper/tmp/*
+/Minecraft_Package_Helper/build/*
+/Setup/*
