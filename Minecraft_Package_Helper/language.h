@@ -3,35 +3,40 @@
 #include<string>
 #include<iostream>
 #include<fstream>
+#include"head.h"
 using namespace std;
 
 //语言类
 class language
 {
 public:
+
 	//静态类成员
-	static int AppLanguage;
 	static string getText(const string text)
 	{
 		string tmp;
-		ifstream languageFile("./lib/language/" + FileName[AppLanguage]);
-		if (languageFile.is_open())
+		ifstream languageFile("./lib/language/" + FileName[AppInfo::AppLanguage]);
+		if (!languageFile.is_open())
+		{
+			return "Can't read " + FileName[AppInfo::AppLanguage];
+		}
+		else 
 		{
 			while (getline(languageFile, tmp))
 			{
-				int pos = tmp.find(text + "=");
-				if (pos>=0)
+				if (tmp.substr(0, 1) == text.substr(0, 1))
 				{
-					int equal = tmp.find("=");
-					int end = tmp.find(";");
-					return tmp.substr(static_cast<std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type>(equal) + 1, static_cast<std::basic_string<char, std::char_traits<char>, std::allocator<char>>::size_type>(end) - equal - 1);
+					auto pos = tmp.find(text + "=");
+					if (pos == 0)
+					{
+						auto equal = tmp.find("=");
+						auto end = tmp.find(";");
+						return tmp.substr(equal + 1,end - equal - 1);
+					}
 				}
 			}
 		}
-		else {
-			return "Can't read " + FileName[AppLanguage];
-		}
-		return tmp;
+		return "NULL";
 	}
 
 private:
@@ -39,5 +44,4 @@ private:
 };
 
 //在类外初始化
-int language::AppLanguage = 0;
 string language::FileName[64] = { "zh_CN.lang","en_US.lang" };

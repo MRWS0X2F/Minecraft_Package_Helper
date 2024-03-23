@@ -11,4 +11,4 @@ Function=Enter the number in "()" to select the function;
 ChooseLanguage=Choose languang;
 pack_js=Pack(JS);
 exit=Exit;
-configDir=Config dir;
+configDir=Config file:./config.json;

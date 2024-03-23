@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <None Include="config.json" />
     <None Include="lib\autopk.js" />
     <None Include="lib\language\en_US.lang" />
     <None Include="lib\language\zh_CN.lang" />
