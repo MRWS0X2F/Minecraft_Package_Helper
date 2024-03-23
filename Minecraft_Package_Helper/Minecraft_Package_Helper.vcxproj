@@ -31,6 +31,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="allocator.h" />
+    <ClInclude Include="AppConfig.h" />
     <ClInclude Include="assertions.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="forwards.h" />

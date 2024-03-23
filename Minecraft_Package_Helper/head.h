@@ -1,8 +1,5 @@
 #pragma once
 
-constexpr auto RP = 0;
-constexpr auto BP = 1;
-constexpr auto Addones = 2;
 //包含相关头文件
 #include<iostream>
 #include<string.h>
@@ -54,6 +51,7 @@ public:
         int tmp = 0;
         int choose = 0;
         cout << "******\t(1):" + language::getText("SetLanguang") << endl;
+        cout << "******\t(2):" + language::getText("configDir") << endl;
         cout << "***************************************" << endl;
         cout << language::getText("Function") << ":";
         cin >> choose;
@@ -67,24 +65,9 @@ public:
             cin >> language::AppLanguage;
             system("cls");
         }
-    }
-};
+        //else if (choose<=2)
+        //{
 
-//包的默认信息
-struct PackInfo
-{
-    //包名
-    char PackName[50] = "Test";
-    //包标题
-    char title[128] = "The Pack made of Minecraft Pack Helper";
-    //包简介
-    char Describe[256] = "这是一段默认的描述，如果你看到这个，证明你的配置文件没有写入正确";
-    //包作者
-    char PackAuthor[32] = "MHP";
-    //包版本
-    int PackVision[3] = { 0,0,1 };
-    //包类型
-    int PackType = RP;
-    //最低游戏版本
-    int minVision[3] = { 1,16,0 };
+        //}
+    }
 };

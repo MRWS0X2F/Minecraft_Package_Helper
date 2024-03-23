@@ -11,3 +11,4 @@ Function=输入"()"内的数字来选择功能;
 ChooseLanguage=选择语言;
 pack_js=打包(JS);
 exit=退出;
+configDir=配置文件目录;

@@ -3,7 +3,6 @@
 #include<string>
 #include<iostream>
 #include<fstream>
-#include<winnt.h>
 using namespace std;
 
 //语言类

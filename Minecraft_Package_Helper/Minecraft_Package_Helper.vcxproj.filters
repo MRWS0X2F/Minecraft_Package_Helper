@@ -85,5 +85,8 @@
     <ClInclude Include="language.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="AppConfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
