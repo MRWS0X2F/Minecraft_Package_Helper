@@ -36,7 +36,7 @@ public:
 				}
 			}
 		}
-		return "NULL";
+		return "Can't find " + text;
 	}
 
 private:

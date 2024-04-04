@@ -4,7 +4,7 @@
   "title": "A Minecraft pack",
   "describe": "a describe",
   "author": "somebody",
-  "type": "RB",
+  "type": "RB1",
   "pack_scope": "false",
   "version": {
     "packv": [ 0, 0, 1 ],

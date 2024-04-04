@@ -3,6 +3,10 @@ using namespace std;
 
 int main()
 {
+    int choose = 0;
+    getPackType();
+    getPackVision();
+    getMinVision();
     //使用UTF-8，防止乱码
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
@@ -14,7 +18,6 @@ int main()
     cout << "***************************************" << endl;
     while (true)
     {
-        int choose = 0;
         cout << "******\t(1):" + language::getText("AppSetting") << endl;
         cout << "******\t(2):" + language::getText("pack_js") << endl;
         cout << "******\t(3):" + language::getText("exit") << endl;

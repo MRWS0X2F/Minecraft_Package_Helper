@@ -74,9 +74,44 @@ string PackInfo::PackName = Config::getDataFormConfig_string("pack_name");
 string PackInfo::title = Config::getDataFormConfig_string("title");
 string PackInfo::Describe = Config::getDataFormConfig_string("describe");
 string PackInfo::PackAuthor = Config::getDataFormConfig_string("author");
-//int PackInfo::PackVision[3] = Config::getDataFormConfig_int("pack_name");
-//int PackInfo::PackType = Config::getDataFormConfig_int("pack_name");
-//int PackInfo::minVision[3] = Config::getDataFormConfig_int("pack_name");
+int PackInfo::PackVision[3] = {0,0,1};
+int PackInfo::PackType = 0;
+int PackInfo::minVision[3] = {1,16,0};
+
+void getPackType()
+{
+    if (Config::getDataFormConfig_string("type")=="R")
+    {
+        PackInfo::PackType = 0;
+    }
+    else if (Config::getDataFormConfig_string("type") == "B")
+    {
+        PackInfo::PackType = 1;
+    }
+    else if (Config::getDataFormConfig_string("type") == "RB")
+    {
+        PackInfo::PackType = 2;
+    }
+    else {
+        cout << language::getText("PackTypeERROR") << endl;
+    }
+}
+
+void getPackVision()
+{
+    for (int i = 0;i <= sizeof(PackInfo::PackVision) / sizeof(int) - 1; i++)
+    {
+        PackInfo::PackVision[i] = Config::getDataFormConfig_int("version", "packv",i);
+    }
+}
+
+void getMinVision()
+{
+    for (int i = 0; i <= sizeof(PackInfo::minVision) / sizeof(int) - 1; i++)
+    {
+        PackInfo::minVision[i] = Config::getDataFormConfig_int("version", "minv", i);
+    }
+}
 
 class Settings
 {
@@ -98,9 +133,9 @@ public:
             cin >> AppInfo::AppLanguage;
             system("cls");
         }
-        //else if (choose<=2)
-        //{
-
-        //}
+        else if (choose<=2)
+        {
+            return;
+        }
     }
 };

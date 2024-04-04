@@ -12,3 +12,4 @@ ChooseLanguage=选择语言;
 pack_js=打包(JS);
 exit=退出;
 configDir=配置文件:根目录下./config.json;
+PackTypeERROR=包类型错误,它只能是“R”“B”或“RB”;
