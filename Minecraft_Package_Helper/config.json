@@ -1,5 +1,5 @@
 {
-  "Language": 1,
+  "Language": 0,
   "pack_name": "test",
   "title": "A Minecraft pack",
   "describe": "a describe",
@@ -9,5 +9,9 @@
   "version": {
     "packv": [ 0, 0, 1 ],
     "minv": [ 1, 16, 0 ]
+  },
+  "uuid": {
+    "header": "a2e3917c-7b15-2da1-3e8f-f30ed6756e0e",
+    "dependencies": "18a13dc8-578c-02fb-484a-3ee9876537ad"
   }
 }

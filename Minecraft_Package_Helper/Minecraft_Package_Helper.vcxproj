@@ -42,6 +42,7 @@
     <ClInclude Include="json_tool.h" />
     <ClInclude Include="language.h" />
     <ClInclude Include="reader.h" />
+    <ClInclude Include="UUID.h" />
     <ClInclude Include="value.h" />
     <ClInclude Include="version.h" />
     <ClInclude Include="writer.h" />

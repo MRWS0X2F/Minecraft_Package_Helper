@@ -1,7 +1,6 @@
 #pragma once
 
 #include"json.h"
-#include"language.h"
 #include<fstream>
 #include<iostream>
 #include<sstream>

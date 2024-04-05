@@ -4,6 +4,7 @@
 #include<iostream>
 #include<string.h>
 #include<Windows.h>
+#include"UUID.h"
 
 //App信息
 class AppInfo
@@ -42,6 +43,26 @@ private:
 #include"AppConfig.h"
 int AppInfo::AppLanguage = Config::getDataFormConfig_int("Language");
 
+//包的默认信息
+class PackInfo
+{
+public:
+    //包名
+    string PackName;
+    //包标题
+    string title;
+    //包简介
+    string Describe;
+    //包作者
+    string PackAuthor;
+    //包版本
+    int PackVision[3];
+    //包类型
+    int PackType;
+    //最低游戏版本
+    int minVision[3];
+};
+
 #include"language.h"
 
 //在AppInfo外初始化
@@ -50,68 +71,48 @@ std::string AppInfo::Vision = language::getText("Vision") + ":0.0.1";
 std::string AppInfo::Author = language::getText("Author") + ":MRWS0X2F";
 std::string AppInfo::Address = language::getText("Address") + ": https://github.com/MRWS0X2F/Minecraft_Package_Helper/";
 
-//包的默认信息
-class PackInfo
-{
-public:
-    //包名
-    static string PackName;
-    //包标题
-    static string title;
-    //包简介
-    static string Describe;
-    //包作者
-    static string PackAuthor;
-    //包版本
-    static int PackVision[3];
-    //包类型
-    static int PackType;
-    //最低游戏版本
-    static int minVision[3];
-};
+//string PackInfo::PackName = Config::getDataFormConfig_string("pack_name");
+//string PackInfo::title = Config::getDataFormConfig_string("title");
+//string PackInfo::Describe = Config::getDataFormConfig_string("describe");
+//string PackInfo::PackAuthor = Config::getDataFormConfig_string("author");
+//int PackInfo::PackVision[3] = {0,0,1};
+//int PackInfo::PackType = 0;
+//int PackInfo::minVision[3] = {1,16,0};
 
-string PackInfo::PackName = Config::getDataFormConfig_string("pack_name");
-string PackInfo::title = Config::getDataFormConfig_string("title");
-string PackInfo::Describe = Config::getDataFormConfig_string("describe");
-string PackInfo::PackAuthor = Config::getDataFormConfig_string("author");
-int PackInfo::PackVision[3] = {0,0,1};
-int PackInfo::PackType = 0;
-int PackInfo::minVision[3] = {1,16,0};
-
-void getPackType()
-{
-    if (Config::getDataFormConfig_string("type")=="R")
-    {
-        PackInfo::PackType = 0;
-    }
-    else if (Config::getDataFormConfig_string("type") == "B")
-    {
-        PackInfo::PackType = 1;
-    }
-    else if (Config::getDataFormConfig_string("type") == "RB")
-    {
-        PackInfo::PackType = 2;
-    }
-    else {
-        cout << language::getText("PackTypeERROR") << endl;
-    }
-}
-
-void getPackVision()
-{
-    for (int i = 0;i <= sizeof(PackInfo::PackVision) / sizeof(int) - 1; i++)
-    {
-        PackInfo::PackVision[i] = Config::getDataFormConfig_int("version", "packv",i);
-    }
-}
-
-void getMinVision()
-{
-    for (int i = 0; i <= sizeof(PackInfo::minVision) / sizeof(int) - 1; i++)
-    {
-        PackInfo::minVision[i] = Config::getDataFormConfig_int("version", "minv", i);
-    }
-}
+//void getPackType()
+//{
+//    if (Config::getDataFormConfig_string("type")=="R")
+//    {
+//        PackInfo::PackType = 0;
+//    }
+//    else if (Config::getDataFormConfig_string("type") == "B")
+//    {
+//        PackInfo::PackType = 1;
+//    }
+//    else if (Config::getDataFormConfig_string("type") == "RB")
+//    {
+//        PackInfo::PackType = 2;
+//    }
+//    else {
+//        cout << language::getText("PackTypeERROR") << endl;
+//    }
+//}
+//
+//void getPackVision()
+//{
+//    for (int i = 0;i <= sizeof(PackInfo::PackVision) / sizeof(int) - 1; i++)
+//    {
+//        PackInfo::PackVision[i] = Config::getDataFormConfig_int("version", "packv",i);
+//    }
+//}
+//
+//void getMinVision()
+//{
+//    for (int i = 0; i <= sizeof(PackInfo::minVision) / sizeof(int) - 1; i++)
+//    {
+//        PackInfo::minVision[i] = Config::getDataFormConfig_int("version", "minv", i);
+//    }
+//}
 
 class Settings
 {

@@ -14,24 +14,27 @@ public:
 	//静态类成员
 	static string getText(const string text)
 	{
+		auto text_size = text.size();
 		string tmp;
 		ifstream languageFile("./lib/language/" + FileName[AppInfo::AppLanguage]);
 		if (!languageFile.is_open())
 		{
 			return "Can't read " + FileName[AppInfo::AppLanguage];
 		}
-		else 
+		else
 		{
 			while (getline(languageFile, tmp))
 			{
-				if (tmp.substr(0, 1) == text.substr(0, 1))
+				auto equal = tmp.find("=");
+				for (int i = 0; i <= equal; i++)
 				{
-					auto pos = tmp.find(text + "=");
-					if (pos == 0)
+					if (tmp.substr(i, 1) != text.substr(i, 1))
 					{
-						auto equal = tmp.find("=");
-						auto end = tmp.find(";");
-						return tmp.substr(equal + 1,end - equal - 1);
+						break;
+					}
+					if (i == text_size - 1)
+					{
+						return tmp.substr(equal + 1, tmp.size() - equal);
 					}
 				}
 			}

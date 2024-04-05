@@ -4,9 +4,6 @@ using namespace std;
 int main()
 {
     int choose = 0;
-    getPackType();
-    getPackVision();
-    getMinVision();
     //使用UTF-8，防止乱码
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
