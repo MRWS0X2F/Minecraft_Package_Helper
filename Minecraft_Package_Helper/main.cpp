@@ -1,9 +1,12 @@
+#include"language.h"
 #include"head.h"
+//#include"UUID.h"
 using namespace std;
 
 int main()
 {
-    int choose = 0;
+    //PackUUID::Verify_UUID("91FCA1D9-E1A4-4153-B2E4-60501CA0D2BA");
+    auto choose = 0;
     //使用UTF-8，防止乱码
     SetConsoleCP(CP_UTF8);
     SetConsoleOutputCP(CP_UTF8);
@@ -22,15 +25,17 @@ int main()
         cout << "***************************************" << endl;
         cout << language::getText("Function") << ":";
         cin >> choose;
-        if (isdigit(choose)!=0)
+        if (cin.fail())
         {
-            choose = 0;
+            cin.clear();
+            cin.ignore();
+            system("cls");
         }
         else {
             if (choose <= 1)
             {
                 system("cls");
-                Settings::AppSetting();
+                //Settings::AppSetting();
             }
             else if (choose <= 2) {
                 system("node ./lib/autopk.js");

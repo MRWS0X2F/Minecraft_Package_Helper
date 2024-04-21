@@ -4,14 +4,14 @@
   "title": "A Minecraft pack",
   "describe": "a describe",
   "author": "somebody",
-  "type": "RB1",
+  "type": "RB",
   "pack_scope": "false",
   "version": {
     "packv": [ 0, 0, 1 ],
     "minv": [ 1, 16, 0 ]
   },
   "uuid": {
-    "header": "a2e3917c-7b15-2da1-3e8f-f30ed6756e0e",
-    "dependencies": "18a13dc8-578c-02fb-484a-3ee9876537ad"
+    "header": "91FCA1D9-E1A4-4153-B2E4-60501CA0D2BA",
+    "dependencies": "E82DD5AE-701C-471D-9DF1-FB351DD1706C"
   }
 }

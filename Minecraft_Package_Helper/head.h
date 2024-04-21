@@ -4,33 +4,19 @@
 #include<iostream>
 #include<string.h>
 #include<Windows.h>
-#include"UUID.h"
 
 //App信息
 class AppInfo
 {
 public:
-    static int AppLanguage;
     //获取名称
-    static std::string getAppName()
-    {
-        return AppName;
-    }
+    static std::string getAppName();
     //获取版本
-    static std::string getAppVision()
-    {
-        return Vision;
-    }
+    static std::string getAppVision();
     //获取作者
-    static std::string getAppAuthor()
-    {
-        return Author;
-    }
+    static std::string getAppAuthor();
     //获取地址
-    static std::string getAppAddress()
-    {
-        return Address;
-    }
+    static std::string getAppAddress();
 private:
     static std::string AppName;
     static std::string Vision;
@@ -38,23 +24,18 @@ private:
     static std::string Address;
 };
 
-//在AppInfo外初始化
-//默认语言
-#include"AppConfig.h"
-int AppInfo::AppLanguage = Config::getDataFormConfig_int("Language");
-
 //包的默认信息
-class PackInfo
+struct PackInfo
 {
 public:
     //包名
-    string PackName;
+    std::string PackName;
     //包标题
-    string title;
+    std::string title;
     //包简介
-    string Describe;
+    std::string Describe;
     //包作者
-    string PackAuthor;
+    std::string PackAuthor;
     //包版本
     int PackVision[3];
     //包类型
@@ -62,14 +43,6 @@ public:
     //最低游戏版本
     int minVision[3];
 };
-
-#include"language.h"
-
-//在AppInfo外初始化
-std::string AppInfo::AppName = language::getText("Welcome");
-std::string AppInfo::Vision = language::getText("Vision") + ":0.0.1";
-std::string AppInfo::Author = language::getText("Author") + ":MRWS0X2F";
-std::string AppInfo::Address = language::getText("Address") + ": https://github.com/MRWS0X2F/Minecraft_Package_Helper/";
 
 //string PackInfo::PackName = Config::getDataFormConfig_string("pack_name");
 //string PackInfo::title = Config::getDataFormConfig_string("title");
@@ -114,29 +87,29 @@ std::string AppInfo::Address = language::getText("Address") + ": https://github.
 //    }
 //}
 
-class Settings
-{
-public:
-    static void AppSetting()
-    {
-        int choose = 0;
-        cout << "******\t(1):" + language::getText("SetLanguang") << endl;
-        cout << "***************************************" << endl;
-        cout << language::getText("Function") << ":";
-        cin >> choose;
-        if (choose<=1)
-        {
-            system("cls");
-            cout << "******\t(0):" + language::getText("zh_CN") << endl;
-            cout << "******\t(1):" + language::getText("en_US") << endl;
-            cout << "***************************************" << endl;
-            cout << language::getText("ChooseLanguage")<<":";
-            cin >> AppInfo::AppLanguage;
-            system("cls");
-        }
-        else if (choose<=2)
-        {
-            return;
-        }
-    }
-};
+//class Settings
+//{
+//public:
+//    static void AppSetting()
+//    {
+//        int choose = 0;
+//        cout << "******\t(1):" + language::getText("SetLanguang") << endl;
+//        cout << "***************************************" << endl;
+//        cout << language::getText("Function") << ":";
+//        cin >> choose;
+//        if (choose<=1)
+//        {
+//            system("cls");
+//            cout << "******\t(0):" + language::getText("zh_CN") << endl;
+//            cout << "******\t(1):" + language::getText("en_US") << endl;
+//            cout << "***************************************" << endl;
+//            cout << language::getText("ChooseLanguage")<<":";
+//            cin >> AppInfo::AppLanguage;
+//            system("cls");
+//        }
+//        else if (choose<=2)
+//        {
+//            return;
+//        }
+//    }
+//};

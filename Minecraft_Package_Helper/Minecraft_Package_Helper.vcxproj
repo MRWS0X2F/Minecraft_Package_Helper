@@ -25,9 +25,11 @@
     <None Include="lib\language\zh_CN.lang" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="head.cpp" />
     <ClCompile Include="json_reader.cpp" />
     <ClCompile Include="json_value.cpp" />
     <ClCompile Include="json_writer.cpp" />
+    <ClCompile Include="language.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
