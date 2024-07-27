@@ -12,7 +12,7 @@ class Config
 {
 public:
     //读json
-    static string getDataFormConfig_string(const string key)
+    static string getDataFromConfig_string(const string key)
     {
         ifstream config("./config.json");
         Reader rd;
@@ -20,7 +20,7 @@ public:
         rd.parse(config, root);
         return root[key].asString();
     }
-    static string getDataFormConfig_string(const string key,const string text)
+    static string getDataFromConfig_string(const string key,const string text)
     {
         ifstream config("./config.json");
         Reader rd;
@@ -28,7 +28,7 @@ public:
         rd.parse(config, root);
         return root[key][text].asString();
     }
-    static int getDataFormConfig_int(const string key)
+    static int getDataFromConfig_int(const string key)
     {
         ifstream config("./config.json");
         Reader rd;
@@ -36,7 +36,7 @@ public:
         rd.parse(config, root);
         return root[key].asInt();
     }
-    static int getDataFormConfig_int(const string key, const int head)
+    static int getDataFromConfig_int(const string key, const int head)
     {
         ifstream config("./config.json");
         Reader rd;
@@ -50,7 +50,7 @@ public:
             return root[key].asInt();
         }
     }
-    static int getDataFormConfig_int(const string key, const string text,const int head)
+    static int getDataFromConfig_int(const string key, const string text,const int head)
     {
         ifstream config("./config.json");
         Reader rd;

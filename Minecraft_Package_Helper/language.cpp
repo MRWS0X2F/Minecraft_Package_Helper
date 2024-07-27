@@ -5,7 +5,7 @@ std::string language::FileName[64] = { "zh_cn.lang","en_us.lang" };
 
 //读取配置文件中的语言参数
 #include"AppConfig.h"
-int language::AppLanguage = Config::getDataFormConfig_int("Language");
+int language::AppLanguage = Config::getDataFromConfig_int("Language");
 
 //获取语言文件中指定文本
 std::string language::getText(const std::string &text)
@@ -41,6 +41,6 @@ std::string language::getText(const std::string &text)
 			}
 		}
 	}
-	//如果文件中没用关键词
+	//如果文件中没有关键词
 	return "Can't find " + text;
 }

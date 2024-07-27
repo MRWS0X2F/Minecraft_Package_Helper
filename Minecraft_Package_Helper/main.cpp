@@ -31,17 +31,17 @@ int main()
         cout << "******\t" + language::getText("configDir") << endl;
         cout << "***************************************" << endl;
         cout << language::getText("Function") << ":";
-        //while (true)
-        //{
-            if (_getch() == 49) {
+        while (true)
+        {
+            if (_kbhit() && _getch() == 49) {
                 system("cls");
                 Settings::AppSetting();
             }
-            if (_getch() == 27) {
+            if (_kbhit() && _getch() == 27) {
                 return 0;
             }
             
-        //}
+        }
         //cin >> choose;
         //if (cin.fail())
         //{

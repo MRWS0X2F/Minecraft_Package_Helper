@@ -26,7 +26,7 @@ void Settings::AppSetting(){
     std::cout << language::getText("Function") << ":";
     while (true)
     {
-        if (_getch() == 49)
+        if (_kbhit() && _getch() == 49)
         {
             system("cls");
             std::cout << "******\t(0):" + language::getText("zh_CN") << std::endl;
