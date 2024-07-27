@@ -87,29 +87,8 @@ public:
 //    }
 //}
 
-//class Settings
-//{
-//public:
-//    static void AppSetting()
-//    {
-//        int choose = 0;
-//        cout << "******\t(1):" + language::getText("SetLanguang") << endl;
-//        cout << "***************************************" << endl;
-//        cout << language::getText("Function") << ":";
-//        cin >> choose;
-//        if (choose<=1)
-//        {
-//            system("cls");
-//            cout << "******\t(0):" + language::getText("zh_CN") << endl;
-//            cout << "******\t(1):" + language::getText("en_US") << endl;
-//            cout << "***************************************" << endl;
-//            cout << language::getText("ChooseLanguage")<<":";
-//            cin >> AppInfo::AppLanguage;
-//            system("cls");
-//        }
-//        else if (choose<=2)
-//        {
-//            return;
-//        }
-//    }
-//};
+class Settings
+{
+public:
+    static void AppSetting();
+};

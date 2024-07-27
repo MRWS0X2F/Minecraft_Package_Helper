@@ -1,4 +1,6 @@
+#include"language.h"
 #include"head.h"
+#include<conio.h>
 
 std::string AppInfo::getAppName() {
 	return AppName;
@@ -18,12 +20,33 @@ std::string AppInfo::getAppAddress()
 	return Address;
 }
 
-#include"language.h"
-//定义语言文件名称
-std::string language::FileName[64] = { "zh_cn.lang","en_us.lang" };
-
-//获取当前语言的文字
-std::string AppInfo::AppName = language::getText("Welcome");
-std::string AppInfo::Vision = language::getText("Vision") + ":0.0.1";
-std::string AppInfo::Author = language::getText("Author") + ":MRWS0X2F";
-std::string AppInfo::Address = language::getText("Address") + ": https://github.com/MRWS0X2F/Minecraft_Package_Helper/";
+void Settings::AppSetting(){
+    std::cout << "******\t(1):" + language::getText("SetLanguang") << std::endl;
+    std::cout << "***************************************" << std::endl;
+    std::cout << language::getText("Function") << ":";
+    while (true)
+    {
+        if (_getch() == 49)
+        {
+            system("cls");
+            std::cout << "******\t(0):" + language::getText("zh_CN") << std::endl;
+            std::cout << "******\t(1):" + language::getText("en_US") << std::endl;
+            std::cout << "***************************************" << std::endl;
+            std::cout << language::getText("ChooseLanguage") << ":";
+            std::cin >> language::AppLanguage;
+            if (std::cin.fail()){
+                std::cin.clear();
+                std::cin.ignore();
+            }
+            else
+            {
+                system("cls");
+                break;
+                return;
+            }
+        }
+        else if (_kbhit() && _getch() != 1) {
+            return;
+        }
+    }
+}
