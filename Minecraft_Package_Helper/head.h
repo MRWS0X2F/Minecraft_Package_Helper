@@ -30,16 +30,22 @@ struct PackInfo
 public:
     //包名
     std::string PackName;
+
     //包标题
     std::string title;
+
     //包简介
     std::string Describe;
+
     //包作者
     std::string PackAuthor;
+
     //包版本
     int PackVision[3];
+
     //包类型
     int PackType;
+
     //最低游戏版本
     int minVision[3];
 };

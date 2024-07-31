@@ -31,7 +31,7 @@ int main()
         cout << "******\t" + language::getText("configDir") << endl;
         cout << "***************************************" << endl;
         cout << language::getText("Function") << ":";
-        while (true)
+      /*  while (true)
         {
             if (_kbhit() && _getch() == 49) {
                 system("cls");
@@ -41,7 +41,7 @@ int main()
                 return 0;
             }
             
-        }
+        }*/
         //cin >> choose;
         //if (cin.fail())
         //{

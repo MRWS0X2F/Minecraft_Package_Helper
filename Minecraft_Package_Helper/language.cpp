@@ -27,15 +27,24 @@ std::string language::getText(const std::string &text)
 		{
 			//查找“=”的位置
 			auto equal = line.find("=");
-			//检查此行中是否匹配
-			for (unsigned int i = 0; i <= equal; i++)
+			//检测是否有“=”
+			if (equal == std::string::npos)
 			{
+				continue;
+			}
+			//检查此行中是否匹配
+			for (unsigned int i = 0; i < equal; i++)
+			{
+				if (line.substr(0, equal).size() != text_size)
+				{
+					break;
+				}
 				if (line.substr(i, 1) != text.substr(i, 1))
 				{
 					break;
 				}
-				if (i == text_size - 1)
-				{
+				else{
+					//截取并返回目标内容
 					return line.substr(equal + 1, line.size() - equal);
 				}
 			}
